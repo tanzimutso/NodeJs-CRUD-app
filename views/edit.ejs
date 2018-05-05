@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+</head>
+
+<body class="jumbotron">
+    <div class="container">
+        <div class="container-fluid">
+            <form method="POST" action="/user/update/<%= customer[0]._id %>">
+                <div class="form-group">
+                    <input type="text" class="form-control" value="<%= customer[0].firstName %>" name="firstName">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" value="<%= customer[0].lastName %>" name="lastName">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="update" class="btn btn-warning">
+                </div>
+            </form>
+        </div>
+
+       
+    </div>
+</body>
+
+</html>

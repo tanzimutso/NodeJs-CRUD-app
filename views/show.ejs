@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+</head>
+
+<body class="jumbotron">
+    <div class="container">
+        <div class="container-fluid">
+
+            <h1>
+                <%= title %>
+            </h1>
+            <ul class="list-group">
+                <% users.forEach(function(user){ %>
+                    <li class="list-group-item">
+                        <%= user.firstName %>
+                            <%= user.lastName %>
+                            <a class="btn btn-warning" style="color:white; float: right;" href="/user/edit/<%= user._id %>">Update</a>
+                            <a class="btn btn-danger" style="color:bisque; float: right;" href="/user/delete/<%= user._id %>">Delete</a>
+                    </li>
+                    <% }) %>
+            </ul>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
